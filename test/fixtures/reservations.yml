@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rsv_date: 2014-04-04
+  start_time: 2014-04-04 02:17:38
+  end_time: 2014-04-04 02:17:38
+  ksu_class: false
+  userpk: 1
+  roompk: 1
+  statuspk: 1
+  setup_time: 2014-04-04 02:17:38
+  teardown: 2014-04-04 02:17:38
+  dining_svcs: false
+
+two:
+  rsv_date: 2014-04-04
+  start_time: 2014-04-04 02:17:38
+  end_time: 2014-04-04 02:17:38
+  ksu_class: false
+  userpk: 1
+  roompk: 1
+  statuspk: 1
+  setup_time: 2014-04-04 02:17:38
+  teardown: 2014-04-04 02:17:38
+  dining_svcs: false

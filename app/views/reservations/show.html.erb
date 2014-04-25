@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rsv date:</strong>
+  <%= @reservation.rsv_date %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @reservation.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @reservation.end_time %>
+</p>
+
+<p>
+  <strong>Ksu class:</strong>
+  <%= @reservation.ksu_class %>
+</p>
+
+<p>
+  <strong>Userpk:</strong>
+  <%= @reservation.userpk %>
+</p>
+
+<p>
+  <strong>Roompk:</strong>
+  <%= @reservation.roompk %>
+</p>
+
+<p>
+  <strong>Statuspk:</strong>
+  <%= @reservation.statuspk %>
+</p>
+
+<p>
+  <strong>Setup time:</strong>
+  <%= @reservation.setup_time %>
+</p>
+
+<p>
+  <strong>Teardown:</strong>
+  <%= @reservation.teardown %>
+</p>
+
+<p>
+  <strong>Dining svcs:</strong>
+  <%= @reservation.dining_svcs %>
+</p>
+
+<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
+<%= link_to 'Back', reservations_path %>

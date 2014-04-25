@@ -1,0 +1,76 @@
+Buildings
+buildingpk int
+name varchar 50
+address varchar 244
+photolink varchar 255
+curator int
+gps_long float
+gps_lat float
+campuspk int
+
+rails generate scaffold building name:string address:string curatorfk:integer gps_long:decimal{2.5} gps_lat:decimal{2.5} campusfk:integer
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+room
+max_capacity int
+floor char(10)
+room_num char(10)
+int_cost float
+ext_cost float
+ext_use_allowed bit
+whiteboards int
+overhead int
+computer_connectivity bit
+wireless_access bit
+projection_system bit
+sound_system bit
+stage bit
+multi_level int
+restrictions char(10)
+buildingpk int
+
+rails generate scaffold max_capacity:integer floor:string room_num:string int_cost:numeric ext_cost:numeric
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+photos
+photo_dir varchar(255)
+photo_name varchar(255)
+buildingpk int
+roompk int
+photo_order int
+
+rails generage scaffold photo photo_dir:string photo_name:string buildingpk:integer roompk:integer photo_order:integer
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+campus
+name varchar(255)
+
+rails generate scaffold campus name:string
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+user
+id int
+group_org_name varchar(255)
+firstname varchar(255)
+lastname varchar(255)
+contact_ph1 varchar(255)
+contact_ph2 varchar(255)
+allow_reservation bit
+address varchar(255)
+address2 varchar(255)
+city varchar(50)
+state char(2)
+email_address varchar(255)
+password varchar(255)
+active bit
+
+rails generate scaffold user group_org_name:string firstname:string lastname:string address:string address2:string city:string zip:string contact_ph1:string contact_ph2:string email_address:string email_address2:string allow_reservation:boolean userid:string password:string active:boolean
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+status
+id int ( created automagically )
+name varchar(50)
+
+rails generate scaffold status name:string

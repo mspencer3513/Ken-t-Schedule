@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  max_capacity: 1
+  floor: MyString
+  room_num: MyString
+  int_cost: 
+  ext_cost: 
+  ext_use_allowed: false
+  whiteboards: 1
+  overhead: 1
+  computer_connectivity: false
+  wireless_access: false
+  projection_system: false
+  sound_system: false
+  stage: false
+  multi_level: 1
+  restrictions: MyString
+  buildingpk: 1
+
+two:
+  max_capacity: 1
+  floor: MyString
+  room_num: MyString
+  int_cost: 
+  ext_cost: 
+  ext_use_allowed: false
+  whiteboards: 1
+  overhead: 1
+  computer_connectivity: false
+  wireless_access: false
+  projection_system: false
+  sound_system: false
+  stage: false
+  multi_level: 1
+  restrictions: MyString
+  buildingpk: 1

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dept_naem: MyString
+  dept_email: MyString
+  mandatory: false
+  lead_time: 1
+
+two:
+  dept_naem: MyString
+  dept_email: MyString
+  mandatory: false
+  lead_time: 1

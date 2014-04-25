@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @building.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @building.address %>
+</p>
+
+<p>
+  <strong>Curatorfk:</strong>
+  <%= @building.curatorfk %>
+</p>
+
+<p>
+  <strong>Gps long:</strong>
+  <%= @building.gps_long %>
+</p>
+
+<p>
+  <strong>Gps lat:</strong>
+  <%= @building.gps_lat %>
+</p>
+
+<p>
+  <strong>Campusfk:</strong>
+  <%= @building.campusfk %>
+</p>
+
+<%= link_to 'Edit', edit_building_path(@building) %> |
+<%= link_to 'Back', buildings_path %>

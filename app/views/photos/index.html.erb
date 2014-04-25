@@ -1,0 +1,35 @@
+<h1>Listing photos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Photo dir</th>
+      <th>Photo name</th>
+      <th>Buildingpk</th>
+      <th>Roompk</th>
+      <th>Photo order</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @photos.each do |photo| %>
+      <tr>
+        <td><%= photo.photo_dir %></td>
+        <td><%= photo.photo_name %></td>
+        <td><%= photo.buildingpk %></td>
+        <td><%= photo.roompk %></td>
+        <td><%= photo.photo_order %></td>
+        <td><%= link_to 'Show', photo %></td>
+        <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
+        <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Photo', new_photo_path %>

@@ -1,0 +1,82 @@
+<%= form_for(@room) do |f| %>
+  <% if @room.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@room.errors.count, "error") %> prohibited this room from being saved:</h2>
+
+      <ul>
+      <% @room.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<fieldset><legend>Room Information</legend>
+  <div class="field">
+    <%= f.label :buildingpk %>
+    <%= f.number_field :buildingpk %>
+  </div>
+  <div class="field">
+    <%= f.label :room_num %>
+    <%= f.text_field :room_num %>
+  </div>
+  <div class="field">
+    <%= f.label :floor %>
+    <%= f.text_field :floor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :max_capacity %>
+    <%= f.number_field :max_capacity %>
+  </div>
+  <div class="field">
+    <%= f.label :int_cost %>
+    <%= f.text_field :int_cost %>
+  </div>
+  <div class="field">
+    <%= f.label :ext_cost %>
+    <%= f.text_field :ext_cost %>
+  </div>
+  <div class="field">
+    <%= f.label :ext_use_allowed %>
+    <%= f.check_box :ext_use_allowed %>
+  </div>
+  <div class="field">
+    <%= f.label :whiteboards %>
+    <%= f.number_field :whiteboards %>
+  </div>
+  <div class="field">
+    <%= f.label :overhead %>
+    <%= f.number_field :overhead %>
+  </div>
+  <div class="field">
+    <%= f.label :computer_connectivity %>
+    <%= f.check_box :computer_connectivity %>
+  </div>
+  <div class="field">
+    <%= f.label :wireless_access %>
+    <%= f.check_box :wireless_access %>
+  </div>
+  <div class="field">
+    <%= f.label :projection_system %>
+    <%= f.check_box :projection_system %>
+  </div>
+  <div class="field">
+    <%= f.label :sound_system %>
+    <%= f.check_box :sound_system %>
+  </div>
+  <div class="field">
+    <%= f.label :stage %>
+    <%= f.check_box :stage %>
+  </div>
+  <div class="field">
+    <%= f.label :multi_level %>
+    <%= f.number_field :multi_level %>
+  </div>
+  <div class="field">
+    <%= f.label :restrictions %>
+    <%= f.text_field :restrictions %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

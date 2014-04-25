@@ -1,0 +1,39 @@
+<h1>Listing users</h1>
+
+<table style="border:2">
+  <thead>
+    <tr>
+      <th span="width:90%">Group org name</th>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Address</th>
+      <th>Contact Phone 1</th>
+      <th>Contact Phone 2</th>
+      <th>Email address</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.group_org_name %></td>
+        <td><%= user.firstname %></td>
+        <td><%= user.lastname %></td>
+        <td><%= user.address %></td>
+        <td><%= user.contact_ph1 %></td>
+        <td><%= user.contact_ph2 %></td>
+        <td><%= user.email_address %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>

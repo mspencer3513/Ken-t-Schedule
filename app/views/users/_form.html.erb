@@ -1,0 +1,100 @@
+<%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <fieldset><legend>Login Info</legend>
+     <div class="field">
+        <%= f.label :userid %>
+        <%= f.text_field :userid %>
+     </div>
+     <div class="field">
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+	</div>
+	<div class="field">
+		<%= f.label :password_confirmation %>
+		<%= f.password_field :password_confirmation %>
+     </div>
+  </fieldset>
+
+  <fieldset><legend>Name and Address</legend>
+      <div class="field">
+         <%= f.label :group_org_name %>
+         <%= f.text_field :group_org_name, :size => 50 %>
+      </div>
+ 
+      <div class="field">
+         <%= f.label :firstname %>
+         <%= f.text_field :firstname %>
+	</div>
+	<div class="field">
+         <%= f.label :lastname %>
+         <%= f.text_field :lastname %>
+      </div>
+	  
+      <div class="field">
+         <%= f.label :address %>
+         <%= f.text_field :address %>
+      </div>
+
+
+      <div class="field">
+         <%= f.label :address2 %>
+         <%= f.text_field :address2, :size=> 50  %>
+      </div>
+
+
+      <div class="field">
+         <%= f.label :city %>
+         <%= f.text_field :city, :size=>"50" %>
+	</div>
+	<div class="field">
+         <%= f.label :state %>
+         <%= f.text_field :state, :size=>"2" %>
+	</div>
+	<div class="field">
+         <%= f.label :zip %>
+         <%= f.text_field :zip, :size=>"5" %>
+      </div>
+
+      <div class="field">
+         <%= f.label :contact_ph1 %>
+         <%= f.text_field :contact_ph1, :size=>"14" %>
+	</div>
+	<div class="field">
+         <%= f.label :contact_ph2 %>
+         <%= f.text_field :contact_ph2, :size=>"14" %>
+      </div>
+
+      <div class="field">
+         <%= f.label :email_address %>
+         <%= f.text_field :email_address, :size=>"30" %>
+      </div>
+  
+      <div class="field">
+         <%= f.label :email_address2 %>
+         <%= f.text_field :email_address2, :size=>"30" %>
+      </div>
+
+      <div class="field">
+         <%= f.label :allow_reservation %>
+         <%= f.check_box :allow_reservation %>
+	</div>
+	<div class="field">
+         <%= f.label :active %>
+         <%= f.check_box :active %>
+      </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

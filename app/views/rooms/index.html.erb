@@ -1,0 +1,57 @@
+<h1>Listing rooms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Max capacity</th>
+      <th>Floor</th>
+      <th>Room num</th>
+      <th>Int cost</th>
+      <th>Ext cost</th>
+      <th>Ext use allowed</th>
+      <th>Whiteboards</th>
+      <th>Overhead</th>
+      <th>Computer connectivity</th>
+      <th>Wireless access</th>
+      <th>Projection system</th>
+      <th>Sound system</th>
+      <th>Stage</th>
+      <th>Multi level</th>
+      <th>Restrictions</th>
+      <th>Buildingpk</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rooms.each do |room| %>
+      <tr>
+        <td><%= room.max_capacity %></td>
+        <td><%= room.floor %></td>
+        <td><%= room.room_num %></td>
+        <td><%= room.int_cost %></td>
+        <td><%= room.ext_cost %></td>
+        <td><%= room.ext_use_allowed %></td>
+        <td><%= room.whiteboards %></td>
+        <td><%= room.overhead %></td>
+        <td><%= room.computer_connectivity %></td>
+        <td><%= room.wireless_access %></td>
+        <td><%= room.projection_system %></td>
+        <td><%= room.sound_system %></td>
+        <td><%= room.stage %></td>
+        <td><%= room.multi_level %></td>
+        <td><%= room.restrictions %></td>
+        <td><%= room.buildingpk %></td>
+        <td><%= link_to 'Show', room %></td>
+        <td><%= link_to 'Edit', edit_room_path(room) %></td>
+        <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Room', new_room_path %>

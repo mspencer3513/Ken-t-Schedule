@@ -1,0 +1,45 @@
+<h1>Listing reservations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rsv date</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Ksu class</th>
+      <th>Userpk</th>
+      <th>Roompk</th>
+      <th>Statuspk</th>
+      <th>Setup time</th>
+      <th>Teardown</th>
+      <th>Dining svcs</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reservations.each do |reservation| %>
+      <tr>
+        <td><%= reservation.rsv_date %></td>
+        <td><%= reservation.start_time %></td>
+        <td><%= reservation.end_time %></td>
+        <td><%= reservation.ksu_class %></td>
+        <td><%= reservation.userpk %></td>
+        <td><%= reservation.roompk %></td>
+        <td><%= reservation.statuspk %></td>
+        <td><%= reservation.setup_time %></td>
+        <td><%= reservation.teardown %></td>
+        <td><%= reservation.dining_svcs %></td>
+        <td><%= link_to 'Show', reservation %></td>
+        <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
+        <td><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reservation', new_reservation_path %>

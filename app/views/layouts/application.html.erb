@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Ken't Schedule</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id='page' style="position:relative; margin-left:20px; float; left;">
+     <div id='headerbar' style="position:relative; background-color:#253952; height:120px; width:100%; top:0;">
+	    <span style="text-align:center;">
+	    <%= image_tag "kent-state-logo.png" %>
+		<%= image_tag "kentschedulelogo.png", :style => "margin-top:15px; margin-left:30px; margin-bottom:5px; height:60px; width:800px" %>
+		</span>
+    	<div id='menu' style="position:relative; text-align:center; ">
+	          <%= link_to "Create Reservation", { :controller=>"reservations", :action=>"new"}, {:style=>"color:#ffbf00;"} %>
+		      <%= link_to "Search Reservations", { :controller=>"reservations", :action=>"index"}, {:style=>"color:#ffbf00;"} %>
+	          <%= link_to "List Reservations", { :controller=>"reservations", :action=>"index"}, {:style=>"color:#ffbf00;"} %>
+			  
+	    </div>
+		<div id='logged-in' style="text-align:right; ">
+		    <span style="text-align:right; color:#ffbf00; margin-right:20px; font-weight:bold; ">User: Guest</span>	
+		</div>
+		<div id='exit-bar' style="text-align:right; ">
+		    <span style="text-align:right;">
+			   <%= link_to({controller => 'users', :action => 'index'}) do %>
+			      <%= image_tag('logout-icon.png', width:50, height:70, alt: 'Logout') %>
+			   <% end %>
+			</span>	
+		</div>
+		
+    </div>
+    <div id="content" style=" background-color:#EEEEEE;width:100%;float:left;">
+        <%= yield %>
+    </div>
+     
+</div>
+
+</body>
+</html>

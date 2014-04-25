@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  photo_dir: MyString
+  photo_name: MyString
+  buildingpk: 1
+  roompk: 1
+  photo_order: 1
+
+two:
+  photo_dir: MyString
+  photo_name: MyString
+  buildingpk: 1
+  roompk: 1
+  photo_order: 1

@@ -1,0 +1,66 @@
+<%= form_for(@reservation) do |f| %>
+  <% if @reservation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
+
+      <ul>
+      <% @reservation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<frameset>
+  <legend>Date</legend>
+  <div class="field">
+    <%= f.label :start_time, "Start Time" %>
+    <%= f.datetime_select :start_time %><br>
+    <%= f.label :end_time, "End Time" %>
+    <%= f.datetime_select :end_time %><br>
+  </div>
+</frameset>
+<frameset><legend>Room Information</legend>
+  <div class="field">
+    <%= f.label :ksu_class %>
+    <%= f.check_box :ksu_class %>
+  </div>
+  <div class="field">
+    <%= f.label :userpk, "Requesting User" %>
+    <%= f.number_field :userpk %>
+  </div>
+  <div class="field">
+    <%= f.label :roompk, "Room" %>
+    <%= f.number_field :roompk %>
+  </div>
+  <div class="field">
+    <%= f.label :statuspk, "Reservation Status" %>
+    <%= f.number_field :statuspk %>
+  </div>
+</frameset>
+<frameset><legend>Optional Information</legend>
+  <div class="field">
+    <%= f.label :setup_reqd, "Setup Required" %>
+    <%= f.check_box :setup_reqd %>
+  </div>  
+  <div class="field">
+    <%= f.label :setup_time, "Setup Time" %>
+    <%= f.number_field :setup_time %>
+  </div>  
+  <div class="field">
+    <%= f.label :teardown_time, "Teardown Time" %>
+    <%= f.number_field :teardown %>
+  </div>
+  <div class="field">
+    <%= f.label :dining_services, "Dining Services Requested" %>
+    <%= f.check_box :dining_svcs %>
+  </div>
+  <div class="field">
+    <%= f.label :no_of_parking_passes %>
+    <%= f.number_field :no_of_pp %>
+  </div>
+</frameset>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
